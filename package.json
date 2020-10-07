@@ -6,13 +6,14 @@
   "dependencies": {
     "gitbook-cli": "^2.3.2",
     "gitbook-plugin-mathjax": "^1.1.2",
+    "gitbook-plugin-mermaid-gb3": "^2.1.0",
     "mathjax": "^2.7.6"
   },
   "devDependencies": {},
   "scripts": {
     "serve": "npx gitbook serve ./docs",
     "build": "npx gitbook build ./docs",
-    "mathjax": "npx gitbook install ./docs"
+    "gitbook-plugins": "npx gitbook install ./docs"
   },
   "repository": {
     "type": "git",
