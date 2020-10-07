@@ -1,12 +1,12 @@
 # Yield Protocol
 
-Yield Protocol brings collateralized fixed-term borrowing, fixed-rate lending and interest rate markets to decentralized finance.
+Yield Protocol brings collateralized fixed-rate,fixed-term borrowing and lending and interest rate markets to decentralized finance.
 
-This solves a major pain point around today's DeFi lending protocols: **predictable interest rates**. Today's DeFi credit instituions offer only variable interest rates. 
-Interest rate volatility can make it difficult for borrowers and lenders to plan for the future, make investment decisions, and properly hedge risk.
+This solves a major pain point around today's DeFi lending protocols: **predictable interest rates**. Existing DeFi protocols offer only variable interest rates. 
+These protocols may experience interest rate volatility that can make it difficult for you to plan for the future, make investment decisions, and properly hedge risk when borrowing and lending.
 
 Yield Protocol allows you to have a "set and forget" experience, instead of constantly rebalancing your assets across DeFi in an effort to minimize your borrow rates or maximize your lending yields.
-We do that with a new primitive, _fixed yield tokens_ also known as _fyTokens_. 
+We accomplish that with a new primitive, _fixed yield tokens_, or _fyTokens_ for short. fyTokens are Ethereum-based tokens (ERC20) that may be redeemed one-for-one for a target asset after a predetermined maturity date. 
 
 fyTokens are analogous to [zero-coupon bonds](https://www.investopedia.com/terms/z/zero-couponbond.asp). 
 
@@ -16,7 +16,7 @@ The interest rate is calculated by the difference between the discounted value a
 
 <figure class="image" align = "center">
   <img src="assets/mature.jpg" width = 400>
-  <figcaption><i>At maturity, yDai are redeemable for Dai one to one</i></figcaption>
+  <figcaption><i>At maturity, fyDai are redeemable for Dai one to one</i></figcaption>
   <br>
 </figure>
 
@@ -47,7 +47,7 @@ or into the [Developers](developers/README.md) if you are a developer looking to
 
 ## Security
 
-Yield Protocol is built on MakerDAO, DeFi's biggest credit institution. Yield does not require any additional trusted intermediaries 
+Yield Protocol is built on MakerDAO, DeFi's biggest lending platform. Yield does not require any additional trusted intermediaries 
 or governance processes and **was built to maximize decentralization, censorship resistance, and security**.
 
 ### MakerDAO Integration
@@ -59,7 +59,7 @@ are determined by Maker’s parameters, and can be changed by their governance s
 
 Additionally, when checking the value of ETH collateral in Yield vaults, Yield uses Maker’s ETH oracle. 
 
-Finally, if Maker governance triggers emergency shutdown of the Maker protocol, yDai borrowers and lenders would be affected. 
+Finally, if Maker governance triggers emergency shutdown of the Maker protocol, Yield borrowers and lenders would be affected. 
 
 The Yield Protocol aims to handle this case as gracefully as possible, initiating its own shutdown procedure in response to a Maker shutdown.
 
