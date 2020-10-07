@@ -1,3 +1,15 @@
 {
-    "plugins": ["mathjax", "mermaid-gb3"]
+    "plugins": [
+        "mathjax", 
+        "mermaid-v8", 
+        "collapsible-chapters",
+        "insert-logo",
+        "remove-publish-link"
+    ],
+    "pluginsConfig": {
+        "insert-logo": {
+            "url": "https://kovan-yield.netlify.app/static/media/logo.9ae59d72.svg",
+            "style": "background: none;"
+        }
+    }
 }
