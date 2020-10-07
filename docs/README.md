@@ -50,6 +50,17 @@ or into the [Developers](developers/README.md) if you are a developer looking to
 Yield Protocol is built on MakerDAO, DeFi's biggest credit institution. Yield does not require any additional trusted intermediaries 
 or governance processes and **was built to maximize decentralization, censorship resistance, and security**.
 
+Yield Protocol was audited by Trail of Bits. You may find the report [here](yield.is/tob_audit.pdf).
+
+### Contract Addresses
+
+Below you will find all our deployed smart contracts' addresses.
+
+**TODO: Add all of our contract addresses once deployed**
+
+These contracts have special permissions over each other. You may review these permissions
+by running [this script](https://github.com/yieldprotocol/fyDai/blob/master/scripts/orchestration.js).
+
 ## Useful Links
 
 - [Yield DApp](https://app.yield.is)
@@ -59,4 +70,4 @@ or governance processes and **was built to maximize decentralization, censorship
 ## Security
 
 Responsible security disclosures should be sent to [security@yield.is](mailto:security@yield.is). Thank you
-for keeping Yield safe!
+for keeping Yield safe! We will get back to you as soon as we can.
