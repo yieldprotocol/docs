@@ -54,7 +54,7 @@ or governance processes and **was built to maximize decentralization, censorship
 
 The protocol is directly affected by Maker governance changes. 
 
-The collateralization ratio on Yield vaults as well as the yDai borrowing and lending rates after maturity, 
+The collateralization ratio on Yield vaults as well as the fyDai borrowing and lending rates after maturity, 
 are determined by Maker’s parameters, and can be changed by their governance system. 
 
 Additionally, when checking the value of ETH collateral in Yield vaults, Yield uses Maker’s ETH oracle. 
