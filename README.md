@@ -8,6 +8,7 @@ Gitbook for Yield Protocol's documentation. Hosted at https://docs.yield.is.
 
 ```
 yarn
+yarn mathjax
 ```
 
 ## Run a hot-reload frontend

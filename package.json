@@ -11,7 +11,8 @@
   "devDependencies": {},
   "scripts": {
     "serve": "npx gitbook serve ./docs",
-    "build": "npx gitbook build ./docs"
+    "build": "npx gitbook build ./docs",
+    "mathjax": "npx gitbook install ./docs"
   },
   "repository": {
     "type": "git",
