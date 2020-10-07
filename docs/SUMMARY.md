@@ -16,6 +16,7 @@
 ## Developers
 
 - [Getting Started](developers/README.md)
-- [YieldSpace](developers/pool.md)
+- [YieldSpace](developers/yieldspace.md)
 - [Controller](developers/controller.md)
 - [Proxy](developers/proxies.md)
+- [Liquidations](developers/liquidation.md)

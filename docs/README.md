@@ -45,12 +45,23 @@ Now that you know how zero coupon bonds work, dive into the [Users](users/README
 or into the [Developers](developers/README.md) if you are a developer looking to integrate with our smart contracts
 
 
-## A statement from our team
+## Security
 
 Yield Protocol is built on MakerDAO, DeFi's biggest credit institution. Yield does not require any additional trusted intermediaries 
 or governance processes and **was built to maximize decentralization, censorship resistance, and security**.
 
-Yield Protocol was audited by Trail of Bits. You may find the report [here](yield.is/tob_audit.pdf).
+### MakerDAO Integration
+
+The protocol is directly affected by Maker governance changes. 
+
+The collateralization ratio on Yield vaults as well as the yDai borrowing and lending rates after maturity, 
+are determined by Maker’s parameters, and can be changed by their governance system. 
+
+Additionally, when checking the value of ETH collateral in Yield vaults, Yield uses Maker’s ETH oracle. 
+
+Finally, if Maker governance triggers emergency shutdown of the Maker protocol, yDai borrowers and lenders would be affected. 
+
+The Yield Protocol aims to handle this case as gracefully as possible, initiating its own shutdown procedure in response to a Maker shutdown.
 
 ### Contract Addresses
 
@@ -61,13 +72,17 @@ Below you will find all our deployed smart contracts' addresses.
 These contracts have special permissions over each other. You may review these permissions
 by running [this script](https://github.com/yieldprotocol/fyDai/blob/master/scripts/orchestration.js).
 
+### Audit
+
+Yield Protocol was audited by Trail of Bits. You may find the report [here](yield.is/tob_audit.pdf).
+
+### Vulnerability Disclosure
+
+Responsible security disclosures should be sent to [security@yield.is](mailto:security@yield.is). Thank you
+for keeping Yield safe! We will get back to you as soon as we can.
+
 ## Useful Links
 
 - [Yield DApp](https://app.yield.is)
 - [Yield Whitepaper](https://yield.is/whitepaper.pdf)
 - [YieldSpace AMM Whitepaper](https://yield.is/yieldspace.pdf)
-
-## Security
-
-Responsible security disclosures should be sent to [security@yield.is](mailto:security@yield.is). Thank you
-for keeping Yield safe! We will get back to you as soon as we can.

@@ -21,9 +21,17 @@ Here’s an example of using the Yield protocol to borrow Dai, assuming ETH = $4
 1. You decide on Sept. 31, 2020 to borrow 100 fyDAI-DEC20 (fyDAI expiring on December 31, 2020).
 1. You sell the fyDAI-DEC20 on the open market for 98.8 DAI
 
-Effectively, you have borrowed 98.8 DAI today and must repay 100 DAI debt in 3 months. In other words, you have borrowed at 5% APR (**TODO: Is this correct? Explain how this is calculated, since it's not a full year loan**)
+Effectively, you have borrowed 98.8 DAI today and have 100 DAI debt, due in 3 months. In other words, you have borrowed at 5% APR (**TODO: Is this correct? Explain how this is calculated, since it's not a full year loan**)
 
-After maturity is reached on Dec. 31st, 2020, you may return and pay the 100 DAI debt. If you fail to repay after maturity, your debt will grow by the MakerDAO stability fee until your position is closed either via repaying your debt or via [liquidation](../developers/liquidation.md).
+After maturity is reached on Dec. 31st, 2020, you may return and pay the 100 DAI debt.
+
+## Maturity
+
+After maturity, the Yield Protocol does not require that you pay back your debt. 
+
+Instead, it charges you the Maker stability fee as if you were holding an ETH vault.
+
+Due to that, you should try to close your position as soon as possible, or incur higher debt due to the stability fee. If your debt grows beyond your allowed collateralization ratios, you will be [liquidated](../developers/liquidation.md).
 
 ## A note on collateral
 

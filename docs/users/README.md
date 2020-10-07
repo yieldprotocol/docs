@@ -5,7 +5,7 @@ The Yield UI is available at https://app.yield.is.
 We have abstracted away the entirety of our fyTokens, so that you only need to think about
 what matters! How much ETH or DAI you need to put in and what your interest rate or yield will be.
 
-There are several fyDAI maturies you can choose. Think of these similarly to USD Treasury maturities.
+There are several fyDAI maturities you can choose. Think of these similarly to USD Treasury maturities.
 A fyDAI with maturity at December 31st 2020 may be converted to DAI after December 31st 2020. Until then,
 it may trade freely in the market.
 
