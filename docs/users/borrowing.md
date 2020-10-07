@@ -6,7 +6,7 @@ Then, you proceed to sell the fyDAI for DAI, locking your rate.
 At maturity, you need to repay the debt in DAI to reclaim your collateral. 
 
 You may also repay your debt earlier than the maturity. Interest rate changes may affect (positively or negatively!) the amount you need to repay.
-Be careful when repaying earlier as you may incur higher interest rates than paying at maturity. 
+Be careful when repaying earlier as you may incur higher interest rates than paying at maturity.
 
 ![](../assets/borrow_1.png)  |  ![](../assets/borrow_2.png)
 :-------------------------:|:-------------------------:
