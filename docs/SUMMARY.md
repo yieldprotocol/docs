@@ -10,6 +10,7 @@
 - [Borrowing](users/borrowing.md)
 - [Lending](users/lending.md)
 - [Providing Liquidity](users/providing-liquidity.md)
+- [Interest Rate Speculation](users/rate-speculation.md)
 
 ---
 
