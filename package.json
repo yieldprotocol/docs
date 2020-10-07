@@ -1,0 +1,26 @@
+{
+  "name": "yield-docs",
+  "version": "1.0.0",
+  "description": "Yield Protocol brings collateralized fixed-term borrowing, fixed-rate lending and interest rate markets to decentralized finance.",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-mathjax": "^1.1.2",
+    "mathjax": "^2.7.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "serve": "npx gitbook serve ./docs",
+    "build": "npx gitbook build ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gakonst/yield-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gakonst/yield-docs/issues"
+  },
+  "homepage": "https://github.com/gakonst/yield-docs#readme"
+}
