@@ -18,15 +18,11 @@ Here’s an example of using the Yield protocol to borrow Dai, assuming ETH = $4
 1. You decide on Sept. 31, 2020 to borrow 100 fyDAI-DEC20 (fyDAI expiring on December 31, 2020).
 1. You sell the fyDAI-DEC20 on the open market for 98.79 DAI
 
-Effectively, you have borrowed 98.79 DAI today and have 100 DAI debt, due in 3 months. In other words, you have borrowed at 5% APR (**TODO: Is this correct? Explain how this is calculated, since it's not a full year loan**)
-
-Plugging our values in the [present value formula](https://www.investopedia.com/terms/p/presentvalue.asp) and solving for $$r$$ gives us our interest rate:
+Effectively, you have borrowed 98.79 DAI today and have 100 DAI debt, due in 3 months. In other words, you have borrowed at 5% APR. We can show this by plugging our values into the [present value formula](https://www.investopedia.com/terms/p/presentvalue.asp) and solving for $$r$$ to calculate our interest rate:
 
 $$
 0.9879 = \frac{1}{(1 + r)^0.25} \leftrightarrow r = \frac{1}{0.9879}^\frac{1}{.25} - 1 = 0.05
 $$
-
-
 
 After maturity is reached on Dec. 31st, 2020, you may return and pay the 100 DAI debt.
 
