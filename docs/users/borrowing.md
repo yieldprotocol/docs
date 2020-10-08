@@ -28,11 +28,11 @@ After maturity is reached on Dec. 31st, 2020, you may return and pay the 100 DAI
 
 ## Maturity
 
-After maturity, the Yield Protocol does not require that you pay back your debt. 
+After maturity, the Yield Protocol does not require that you pay back your debt immediately. 
 
 Instead, it charges you the Maker stability fee as if you were holding an ETH vault.
 
-Due to that, you should try to close your position as soon as possible, or incur higher debt due to the stability fee. If your debt grows beyond your allowed collateralization ratios, you will be [liquidated](../developers/liquidation.md).
+Due to that, you may want to close your position as soon as possible, or incur higher debt due to the stability fee. If your debt grows beyond your allowed collateralization ratio, you will be [liquidated](../developers/liquidation.md).
 
 ## A note on collateral
 
