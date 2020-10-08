@@ -1,8 +1,7 @@
 # Treasury
 
-Single interface for managing collateral and talking to Maker
 
-Treasury manages asset transfers with users through all contracts in the Yield Protocol.
+The Treasury manages asset transfers with users through all contracts in the Yield Protocol.
 
 Treasury manages asset transfers with external contracts such as Chai and MakerDAO. The `debt()` function returns the debt of the Yield Protocol towards MakerDAO, in Dai terms. The `savings()` function returns the Chai holdings of the Yield Protocol. Only one of `debt()` and `savings()` is greater than zero at the same time.
 
