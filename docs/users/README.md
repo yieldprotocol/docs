@@ -19,8 +19,6 @@ Yield Protocol provides 6 maturity dates, listed below. The number was kept smal
 | September 2021 | 
 | December 2021 | 
 
-
-
 As a user you may do the following actions using the Yield App:
 - **[Borrow](borrowing.md)** DAI against your ETH at fixed interest rates, depending on chosen maturity
 - **[Lend](lending.md)** your DAI for fixed yield
