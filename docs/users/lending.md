@@ -1,6 +1,6 @@
 # Lending
 
-Buying fyDai of any maturity with Df can be thought of as lending DAI at a fixed rate.
+Buying fyDai of any maturity with Dai can be thought of as lending DAI at a fixed rate.
 
 The discount you receive from the face value of the fyDai locks in a fixed return that can be calculated based on the time to maturity. 
 
