@@ -67,14 +67,15 @@ The Yield Protocol aims to handle this case as gracefully as possible, initiatin
 
 Below you will find all our deployed smart contracts' addresses.
 
-**TODO: Add all of our contract addresses once deployed**
+[include](networks/mainnet/addrs_1.08Oct.json)
+
 
 These contracts have special permissions over each other. You may review these permissions
 by running [this script](https://github.com/yieldprotocol/fyDai/blob/master/scripts/orchestration.js).
 
 ### Audit
 
-Yield Protocol was audited by Trail of Bits. You may find the report [here](yield.is/tob_audit.pdf).
+Yield Protocol was audited by Trail of Bits. You may find the report [here](https://github.com/trailofbits/publications/tree/master/reviews).
 
 ### Vulnerability Disclosure
 
@@ -84,5 +85,5 @@ for keeping Yield safe! We will get back to you as soon as we can.
 ## Useful Links
 
 - [Yield DApp](https://app.yield.is)
-- [Yield Whitepaper](https://yield.is/whitepaper.pdf)
+- [Yield Whitepaper](https://yield.is/yield.pdf)
 - [YieldSpace AMM Whitepaper](https://yield.is/yieldspace.pdf)

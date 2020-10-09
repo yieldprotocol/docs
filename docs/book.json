@@ -4,6 +4,7 @@
         "mermaid-v8", 
         "collapsible-chapters",
         "insert-logo",
+        "include-codeblock",
         "remove-publish-link"
     ],
     "pluginsConfig": {

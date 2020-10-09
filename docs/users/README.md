@@ -8,8 +8,6 @@ All borrowing and lending in Yield settles at one of a group of pre-determined m
 
 Yield Protocol provides 6 maturity dates, listed below. The number was kept small so as to give enough options for users deciding how long to borrow or lend their Dai, while preserving liquidity in a few concentrated maturities. For each maturity month listed, maturity occurs on the last day of the month at the end of the day. 
 
-**TODO: Insert all our maturity dates**
-
 | Maturities  |
 |---|
 | October 2020 |

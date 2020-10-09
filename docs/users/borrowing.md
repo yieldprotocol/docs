@@ -12,7 +12,7 @@ Be careful when repaying earlier as you may incur higher interest rates than pay
 ## Example
 
 Here’s an example of using the Yield protocol to borrow Dai, assuming ETH = $400, and a buyer for fyDAI 
-(for users of the Yield App, the buyer will in practice be [YieldSpace](../developers/yieldspace.md), Yield's application specific automated market maker). 
+(for users of the Yield App, the buyer will in practice be [YieldSpace](../developers/contracts/yieldspace.md), Yield's application specific automated market maker). 
 
 1. You deposit 0.5 ETH of collateral (worth $200) in the system. This allows you to borrow up to 132 fyDai from any of the available maturities. 
 1. You decide on Sept. 31, 2020 to borrow 100 fyDAI-DEC20 (fyDAI expiring on December 31, 2020).
@@ -21,7 +21,7 @@ Here’s an example of using the Yield protocol to borrow Dai, assuming ETH = $4
 Effectively, you have borrowed 98.79 DAI today and have 100 DAI debt, due in 3 months. In other words, you have borrowed at 5% APR. We can show this by plugging our values into the [present value formula](https://www.investopedia.com/terms/p/presentvalue.asp) and solving for $$r$$ to calculate our interest rate (we use 0.25 in the exponent because 3 months = 1/4 of a year):
 
 $$
-0.9879 = \frac{1}{(1 + r)^0.25} \leftrightarrow r = \frac{1}{0.9879}^\frac{1}{.25} - 1 = 0.05
+0.9879 = \frac{1}{(1 + r)^{0.25}} \leftrightarrow r = (\frac{1}{0.9879})^{4} - 1 = 0.0499
 $$
 
 After maturity is reached on Dec. 31st, 2020, you may return and pay the 100 DAI debt.
@@ -32,7 +32,7 @@ After maturity, the Yield Protocol does not require that you pay back your debt 
 
 Instead, it charges you the Maker stability fee as if you were holding an ETH vault.
 
-Due to that, you may want to close your position as soon as possible, or incur higher debt due to the stability fee. If your debt grows beyond your allowed collateralization ratio, you will be [liquidated](../developers/liquidation.md).
+Due to that, you may want to close your position as soon as possible, or incur higher debt due to the stability fee. If your debt grows beyond your allowed collateralization ratio, you will be [liquidated](../developers/contracts/liquidation.md).
 
 ## A note on collateral
 
