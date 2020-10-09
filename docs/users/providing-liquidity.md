@@ -2,7 +2,7 @@
 
 To improve the liquidity of fyDai, Yield has designed a new automated liquidity provider that is 
 designed to enable efficient trading between Dai and fyDai. We call this new automated liquidity 
-provider YieldSpace. We refer the reader to the [YieldSpace paper](yield.is/YieldSpace.pdf)
+provider YieldSpace. We refer the reader to the [YieldSpace paper](https://yield.is/YieldSpace.pdf)
 to get a deeper understanding of the calculations and the overall mechanism. The Yield App 
 integrates YieldSpace seamlessly into the user experience.  
 
@@ -46,4 +46,3 @@ by using the Yield Pool.
   <figcaption><i>YieldSpace consistently outperforms Uniswap on both interest rates and market quotes</i></figcaption>
   <br>
 </figure>
-
