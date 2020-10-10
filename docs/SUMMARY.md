@@ -27,4 +27,4 @@
         - [Migrations](developers/contracts/migrations.md)
     - [Periphery](developers/contracts/periphery.md)
         - [YieldProxy](developers/contracts/proxies.md)
-        - [YieldSpace](developers/contracts/yieldspace.md)
+        - [Pool](developers/contracts/pool.md)
