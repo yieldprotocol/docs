@@ -24,5 +24,5 @@ YieldSpace pools do not permit the price of fyDai to trade to a price above 1, a
 
 Pools must be initialized with equal reserves of Dai and yDai, implying a price of 1 and an interest rate of 0%. Once a pool is initialized, users may trade with it to push it to the market interest rate.
 
-To save gas, YieldSpace pools use computations with reduced precision when computing the result of swaps. To ensure that the reduced precision does not cause losses to liquidity providers, the output of all trades is reduced by a small amount called the "error guard". The error guard is 10^12 Wei. Any outputs below the error guard are rounded to zero. 
+To save gas, YieldSpace pools uses reduced precision math operators which cause the swap results to deviate by a controlled amount from the exact result provided by full precision methods. To ensure that the reduced precision does not cause losses to liquidity providers, the output of all trades is reduced by a small amount called the "error guard". The error guard is 10^12 Wei, or about $0.000001. Any outputs below the error guard are rounded to zero. 
 
