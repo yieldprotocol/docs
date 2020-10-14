@@ -1,5 +1,7 @@
 # Controller
 
+[Code](https://github.com/yieldprotocol/fyDai/blob/master/contracts/Controller.sol)
+
 The controller manages the collateral and debt levels for all users, and it is a 
 major user entry point for the Yield protocol. 
 
