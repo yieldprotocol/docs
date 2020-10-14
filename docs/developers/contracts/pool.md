@@ -26,3 +26,17 @@ Pools must be initialized with equal reserves of Dai and yDai, implying a price 
 
 To save gas, YieldSpace pools uses reduced precision math operators which cause the swap results to deviate by a controlled amount from the exact result provided by full precision methods. To ensure that the reduced precision does not cause losses to liquidity providers, the output of all trades is reduced by a small amount called the "error guard". The error guard is 10^12 Wei, or about $0.000001. Any outputs below the error guard are rounded to zero. 
 
+## Pool.sol
+Each `Pool` contract is an ERC20 contract that manages reserves of Dai and a fyDai of a specific maturity. Each pool implements three groups of functions:
+ - `mint` and `burn` which create and destroy the pool tokens, which represent liquidity provided to the pool. To `mint` liquidity tokens the user needs to provide Dai and fyDai liquidity in the same proportion as it already exists in the Pool. When liquidity tokens `burn`, they return to the user fyDai and Dai in the same proportion as they are in the pool, also proprotional to the user share of liquidity tokens towards the total supply.
+ - `sellAssetPreview` and `buyAssetPreview` returns the result of a potential trade for an "Asset" (Dai ot fyDai), limited only by the checks in `YieldMath.sol`.
+ - `sellAsset` and `buyAsset` realize the necessary checks and asset transfers to execute a trade.
+
+## YieldMath.sol
+This library uses `Math64x64.sol` to implement three groups of functions:
+ - Customized `log` and `exp` functions that save as much gas as possible, including by calculating results only to a pre-set precision.
+ - `assetOneInForAssetTwoOut` functions, which calculate the amount of "Asset One" which is required to buy a precise amount of "Asset Two" from the Pool.
+ - `assetOneOutForAssetTwoIn` functions, which calculate the amount of "Asset One" which is obtained by selling a precise amount of "Asset Two" to the Pool.
+
+## Math64x64.sol
+This library provides fixed-point arithmetic in a 64.64 binary format.
