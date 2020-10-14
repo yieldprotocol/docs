@@ -12,6 +12,7 @@ properly on GitHub.
 ```
 yarn
 yarn gitbook-plugins
+yarn patch
 ```
 
 ## Run a hot-reload frontend
