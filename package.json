@@ -13,7 +13,8 @@
   "scripts": {
     "serve": "npx gitbook serve ./docs",
     "build": "npx gitbook build ./docs",
-    "gitbook-plugins": "npx gitbook install ./docs"
+    "gitbook-plugins": "npx gitbook install ./docs",
+    "patch": "bash ./scripts/patch.sh"
   },
   "repository": {
     "type": "git",
