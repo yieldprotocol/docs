@@ -15,8 +15,7 @@
 
 ## Developers
 
-- [Getting Started](developers/README.md)
-- [Architecture](developers/architecture.md)
+- [Architecture](developers/README.md)
 - [Smart Contracts](developers/contracts/README.md)
     - [Core](developers/contracts/core.md)
         - [Controller](developers/contracts/controller.md)
@@ -24,7 +23,6 @@
         - [Liquidations](developers/contracts/liquidations.md)
         - [Unwind](developers/contracts/unwind.md)
         - [Treasury](developers/contracts/treasury.md)
-        - [Migrations](developers/contracts/migrations.md)
     - [Periphery](developers/contracts/periphery.md)
         - [YieldProxy](developers/contracts/proxy.md)
         - [Pool](developers/contracts/pool.md)
