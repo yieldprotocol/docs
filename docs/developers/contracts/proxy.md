@@ -19,16 +19,16 @@ The `unpack`, `onboard` and `authorizePool` functions facilitate ERC20 approvals
  - `removeLiquidityMature` can be used only once the relevant series has matured. Liquidity is removed and the fyDai proceedings are redeemed for Dai. Debt is repaid in the Controller and any remaining Dai is sent to the user.
 
 ## Borrow and repay
- - `borrowDaiForMaximumFYDai` and `borrowMinimumDaiForFYDai` allow to borrow fyDai and immediately trade it in the pool for Dai.
- - `repayFYDaiDebtForMaximumDai` and `repayMinimumFYDaiDebtForDai` allow to exchange Dai for fyDai in a pool and use the resulting Dai to repay Controller debts. This will sometimes be more advantageous to the user than using `controller.repayDai`.
+ - `borrowDaiForMaximumFYDai` and `borrowMinimumDaiForFYDai` enables a user to borrow fyDai and immediately trade it in the pool for Dai.
+ - `repayFYDaiDebtForMaximumDai` and `repayMinimumFYDaiDebtForDai` enables a user to exchange Dai for fyDai in a pool and use the resulting Dai to repay Controller debts. This will sometimes be more advantageous to the user than using `controller.repayDai`.
 
 ## Trade
- - `buyDai`, `sellDai`, `buyFYDai` and `sellFYDai` allow to buy and sell assets in the pools as limit orders.
- - `buyDaiWithSignature` allows to buy Dai as a limit order with an off-chain signature instead of a previous `dai.approve`.
+ - `buyDai`, `sellDai`, `buyFYDai` and `sellFYDai` enables a user to buy and sell assets in the pools as limit orders.
+ - `buyDaiWithSignature` enables a user to buy Dai as a limit order with an off-chain signature instead of a previous `dai.approve`.
 
 ## Repay
- - `repayDaiWithSignature` allows to repay debt in Controller using Dai with an off-chain signature instead of a previous `dai.approve`.
+ - `repayDaiWithSignature` enables a user to repay debt in Controller using Dai with an off-chain signature instead of a previous `dai.approve`.
 
 ## Vault Migration
- - `makerToYield` allows to import user debt and collateral from a MakerDAO account to make a fyDai vault of a given series in Controller.
- - `yieldToMaker` allows to export user debt and collateral from a fyDai series in Controller to a MakerDAO account.
+ - `makerToYield` enables a user to import user debt and collateral from a MakerDAO account to make a fyDai vault of a given series in Controller.
+ - `yieldToMaker` enables a user to export user debt and collateral from a fyDai series in Controller to a MakerDAO account.
