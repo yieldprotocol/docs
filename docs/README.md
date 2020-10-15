@@ -75,7 +75,7 @@ by running [this script](https://github.com/yieldprotocol/fyDai/blob/master/scri
 
 ### Audit
 
-Yield Protocol was audited by Trail of Bits. You may find the report [here](https://github.com/trailofbits/publications/tree/master/reviews).
+Yield Protocol was audited by Trail of Bits. You may find the report [here](https://github.com/trailofbits/publications/blob/master/reviews/YieldProtocol.pdf).
 
 ### Vulnerability Disclosure
 
