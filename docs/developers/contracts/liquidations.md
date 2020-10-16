@@ -2,9 +2,9 @@
 
 Borrowers must maintain a minimum amount of collateral in their vault to secure the debt they owe. If a borrower fails to do so, their vault may be liquidated: their collateral will be seized and auctioned off to repay their debts. For ETH collateral, yDai uses the same collateralization ratio as Maker, which is currently 150%.
 
-The Liquidations contract allows to liquidate undercollateralized weth vaults in a reverse Dutch auction. A user is undercolalteralized if the `controller.isCollateralized` function returns false.
+The Liquidations contract permits any user to initiate the liquidation of an undercollateralized WETH vault. The contract liquidates vaults via a reverse Dutch auction. A user is undercollateralized if the `controller.isCollateralized` function returns false.
 
-The price for the collateral, to be paid in Dai, is defined by the `price` function. Liquidated collateral can be bought at a price that starts at half of the available collateral for all of the debt, and drops to all the avaialable collateral for all of the debt after `Liquidations.AUCTION_TIME`. The price doesn't drop any further.
+The price for the collateral in auction (paid in Dai) is defined by the `price` function. Liquidated collateral can be bought at a price that starts at half of the available collateral for all of the debt, and drops to all the available collateral for all of the debt after `Liquidations.AUCTION_TIME`. Upon reaching the final price, the auction is held open indefinitely at that price. 
 
 Undercollateralized vaults can be liquidated by anyone by calling `liquidate`. This will result in debt and collateral records being read and removed from the Controller using `controller.erase`. The resulting debt and collateral is recorded in `Liquidations.vaults`. The starting time for the auction is recorded in `Liquidations.liquidations`.
 

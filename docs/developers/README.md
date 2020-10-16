@@ -15,8 +15,8 @@ Yield Protocol is made up of the [core](contracts/core.md) contracts and the [pe
 The core contracts are responsible for the management of collateral and debt, issuing and redeeming 
 fyDAI and interacting with MakerDAO's contracts, amoung other functions:
  - `Treasury` is the single point of contact of the Yield Protocol with MakerDAO contracts, including Chai, for the purpose of asset management. 
- - `FYDai` contracts are ERC20 contracts that target a Chai value at a specific maturity, at which they can be redeemed for Dai.
- - `Controller` manages collateral and debt for all users, issuing FYDai tokens as debt is taken or burning them as it is repaid.
+ - `FYDai` contracts are ERC20 contracts that provide tokens that are redeemable for Dai upon reaching a specific maturity. After maturity, the redemption value earns the Dai Savings Rate. 
+ - `Controller` manages collateral and debt for all users, issuing fyDai tokens as debt is taken or burning them as it is repaid.
  - `Liquidations` allows to take over user accounts when they are undercollateralized, selling the colalteral to settle the outstanding debt
  - `Unwind`allows to redeem fyDai, settle debt, and settle ongoing auctions in the event of a MakerDAO shutdown.
 
@@ -34,8 +34,8 @@ Below you may see a high level graph of how the contracts interact with each oth
 
 
 Actions in Yield are multi-step processes. In order to improve UX we also 
-provide a stateless proxy contract in order to batch together complex calls. The
-YieldProxy is also used to convert Maker vaults to Yield vaults (and vice versa)
+provide a stateless proxy contract in order to batch together complex calls. Future versions of the
+YieldProxy will enable converting Maker vaults to Yield vaults (and vice versa).
 Users are expected to interface with the protocol via these proxy contacts.
 
 <figure class="image" align = "center">
