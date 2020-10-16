@@ -29,7 +29,7 @@ To save gas, YieldSpace pools uses reduced precision math operators which cause 
 ## Pool.sol
 Each `Pool` contract is an ERC20 contract that manages reserves of Dai and a fyDai of a specific maturity. Each pool implements three groups of functions:
  - `mint` and `burn` which create and destroy the pool tokens, which represent liquidity provided to the pool. To `mint` liquidity tokens the user needs to provide Dai and fyDai liquidity in the same proportion as it already exists in the Pool. When liquidity tokens `burn`, they return to the user fyDai and Dai in the same proportion as they are in the pool, also proprotional to the user share of liquidity tokens towards the total supply.
- - `sellAssetPreview` and `buyAssetPreview` returns the result of a potential trade for an "Asset" (Dai or fyDai), limited only by the checks in `YieldMath.sol`.
+ - `sellAssetPreview` and `buyAssetPreview` return the result of a potential trade for an "Asset" (Dai or fyDai), limited only by the checks in `YieldMath.sol`.
  - `sellAsset` and `buyAsset` realize the necessary checks and asset transfers to execute a trade.
 
 ## YieldMath.sol

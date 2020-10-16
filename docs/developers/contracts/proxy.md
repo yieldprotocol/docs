@@ -19,11 +19,11 @@ The `unpack`, `onboard` and `authorizePool` functions facilitate ERC20 approvals
  - `removeLiquidityMature` can be used only once the relevant series has matured. Liquidity is removed and the fyDai proceedings are redeemed for Dai. Debt is repaid in the Controller and any remaining Dai is sent to the user.
 
 ## Borrow and repay
- - `borrowDaiForMaximumFYDai` and `borrowMinimumDaiForFYDai` enables a user to borrow fyDai and immediately trade it in the pool for Dai.
- - `repayFYDaiDebtForMaximumDai` and `repayMinimumFYDaiDebtForDai` enables a user to exchange Dai for fyDai in a pool and use the resulting Dai to repay Controller debts. This will sometimes be more advantageous to the user than using `controller.repayDai`.
+ - `borrowDaiForMaximumFYDai` and `borrowMinimumDaiForFYDai` enable a user to borrow fyDai and immediately trade it in the pool for Dai.
+ - `repayFYDaiDebtForMaximumDai` and `repayMinimumFYDaiDebtForDai` enable a user to exchange Dai for fyDai in a pool and use the resulting Dai to repay Controller debts. This will sometimes be more advantageous to the user than using `controller.repayDai`.
 
 ## Trade
- - `buyDai`, `sellDai`, `buyFYDai` and `sellFYDai` enables a user to buy and sell assets in the pools as limit orders.
+ - `buyDai`, `sellDai`, `buyFYDai` and `sellFYDai` enable a user to buy and sell assets in the pools as limit orders.
  - `buyDaiWithSignature` enables a user to buy Dai as a limit order with an off-chain signature instead of a previous `dai.approve`.
 
 ## Repay
