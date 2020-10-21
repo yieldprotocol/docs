@@ -98,9 +98,9 @@ If you add liquidity to a pool and remove it only after maturity, you won't have
 ### Do I have 50% exposure to fyDai if I provide liquidity to a pool?
 The basic idea there is right, although actually a few subtleties. You're not 50% exposed to fyDai — most of the time, the pool mostly holds Dai.
 Behind the scenes the contracts help you to add liquidity by pooling directly part of your Dai, and using the rest of your Dai as collateral to borrow the fyDai part of your liquidity addition.
-So actually if you pool and then interest rates change and you withdraw the next day, you could have impermanent loss unless fees and interest make up for it. This could happen whether fyDai prices fall OR if they rise. However, this loss really is impermanent. If someone holds to maturity then they won't make a loss in Dai terms.
+So actually if you pool and then interest rates change and you withdraw the next day, you could have impermanent loss unless fees and interest make up for it. This could happen whether fyDai prices fall or if they rise. However, this loss really is impermanent. If someone holds to maturity then they won't make a loss in Dai terms.
 
-### I added X Dai to a pool. I then tried to remove 1 Dai, but I didn't receive anything? What happened? 
+### I added X Dai to a pool. I then tried to remove 1 Dai, but I didn't receive anything. What happened? 
 When adding liquidity to the pool, some of your Dai is used to borrow fyDai tokens. When you burn tokens, the debt of those borrowed tokens is paid first. No funds are lost, but burning small amounts of tokens may result in no funds being retrieved. We are working on a solution. The only current workaround is to burn all of your liquidity tokens to retrieve all the funds available to you.
 
 
@@ -117,7 +117,7 @@ If you can't find the answer to your question here, please ask us in [Discord](h
 You can stop lending when you choose.
 
 ### How do you calculate the Portfolio Value?
-The portfolio value is calculated as `(fyDai * APR) / (days to maturity / 365)
+The portfolio value is calculated as `(fyDai * APR) / (days to maturity / 365)`
 
 ### I lent some Dai, and the Current Value is show as less that I invested, why?
 when you lend you are selling Dai to the pool, and getting fyDai back. When you close your prosition you are selling the fyDai that you got before, and getting Dai.
