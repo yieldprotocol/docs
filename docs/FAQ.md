@@ -64,7 +64,7 @@ Remove Liquidity   - 312,000 GAS - proxy.repayDaiWithSignature
 Redeem fyDai       - 240,000 GAS - fyDai.redeem
 
 ### I had to sign and authorize nine times before being able to provide liquidity. Why are there so many steps?
-The Yield Protocol is coded as a set of core contracts that provide very basic, but very robust, functionality. A separate contract (the YieldProxy) exists to allow users to interact with the core contracts easily. The first transaction authorizes the YieldProxy to act with your assets in the core contracts. Within that first transaction we embed an extra signature to allow the YieldProxy to access the Dai in your wallet. You will see this as three confirmations in your browser, the first two instantaneous, and the second taking as much time as the blockchain takes to process it.
+The Yield Protocol is coded as a set of core contracts that provide very basic, but very robust, functionality. A separate contract (the YieldProxy) exists to allow users to interact with the core contracts easily. The first transaction authorizes the YieldProxy to act with your assets in the core contracts. Within that first transaction ([`onboard`](https://github.com/yieldprotocol/fyDai/blob/959305da5c658d8146db56b2c0f61ee9c425de92/contracts/peripheral/YieldProxy.sol#L129-L140)) we embed an extra signature to allow the YieldProxy to access the Dai in your wallet. You will see this as three confirmations in your browser, the first two instantaneous, and the second taking as much time as the blockchain takes to process it.
 
 By using off-chain signatures this becomes a single transaction, and costs about 130,000 gas. Check with [Eth Gas Station](https://ethgasstation.info/calculatorTxV.php) for the current cost.
 
