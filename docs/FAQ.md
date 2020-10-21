@@ -113,5 +113,13 @@ If you can't find the answer to your question here, please ask us in [Discord](h
 
 ## Lending
 
-### If I lend, is it a fixed term or can i stop lending when I choose
+### If I lend, is it a fixed term or can I stop lending when I choose
 You can stop lending when you choose.
+
+### How do you calculate the Portfolio Value?
+The portfolio value is calculated as `(fyDai * APR) / (days to maturity / 365)
+
+### I lent some Dai, and the Current Value is show as less that I invested, why?
+when you lend you are selling Dai to the pool, and getting fyDai back. When you close your prosition you are selling the fyDai that you got before, and getting Dai.
+Both operations in the pool attract a fee of around 5% on the interest rate. If that specific maturity has an interest rate of a 3%, the fee would be of about (0.03 * 0.05 * trade size) in Dai.
+The portfolio value has already deducted the `lend` fee, and the Current Value reflects the return on selling the fyDai in the pool, which reflects the fee, interest rate changes, and slippage.
