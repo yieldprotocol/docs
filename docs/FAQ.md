@@ -9,7 +9,7 @@ If you can't find the answer to your question here, please ask us in [Discord](h
 The Yield company doesn't have a monetization plan yet. All fees in the liquidity pools go to liquidity providers.
 
 ### How can I find you on uniswap?
-There is no governance token. You will not find us on uniswap. You could find the fyDai or fyDaiLP tokens on Uniswap or other exchanges, but you should get better prices for them in [Yield](app.yield.is) since we are tailored to the paticularities of trading fyDai, such as maturity.
+There is no governance token. You will not find us on Uniswap. You could find the fyDai or fyDaiLP tokens on Uniswap or other exchanges, but you should get better prices for them in [Yield](app.yield.is) since the app is tailored to the particularities of trading fyDai, such as its maturity date.
 
 ### When will you release a governance token?
 There are no current plans to release a governance token.
