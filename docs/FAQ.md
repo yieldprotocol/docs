@@ -9,7 +9,7 @@ If you can't find the answer to your question here, please ask us in [Discord](h
 The Yield company doesn't have a monetization plan yet. All fees in the liquidity pools go to liquidity providers.
 
 ### How can I find you on uniswap?
-There is no governance token. You will not find us on uniswap. You could find the fyDai or fyDaiLP tokens on Uniswap or other exchanges, but you should get better prices for them in [Yield](app.yield.is) since we are tailored to the paticularities of trading fyDai, such as maturity.
+There is no governance token. You will not find us on Uniswap. You could find the fyDai or fyDaiLP tokens on Uniswap or other exchanges, but you should get better prices for them in [Yield](app.yield.is) since the app is tailored to the particularities of trading fyDai, such as its maturity date.
 
 ### When will you release a governance token?
 There are no current plans to release a governance token.
@@ -64,11 +64,11 @@ Remove Liquidity   - 312,000 GAS - proxy.repayDaiWithSignature
 Redeem fyDai       - 240,000 GAS - fyDai.redeem
 
 ### I had to sign and authorize nine times before being able to provide liquidity. Why are there so many steps?
-The Yield Protocol is coded as a set of core contracts that provide very basic, but very robust, functionality. A separate contract (the YieldProxy) exists to allow users to interact with the core contracts easily. The first transaction authorizes the YieldProxy to act with your assets in the core contracts. Within that first transaction we embed an extra signature to allow the YieldProxy to access the Dai in your wallet. You will see this as three confirmations in your browser, the first two instantaneous, and the second taking as much time as the blockchain takes to process it.
+The Yield Protocol is coded as a set of core contracts that provide very basic, but very robust, functionality. A separate contract (the YieldProxy) exists to allow users to interact with the core contracts easily. The first transaction authorizes the YieldProxy to act with your assets in the core contracts. Within that first transaction ([`onboard`](https://github.com/yieldprotocol/fyDai/blob/959305da5c658d8146db56b2c0f61ee9c425de92/contracts/peripheral/YieldProxy.sol#L129-L140)) we embed an extra signature to allow the YieldProxy to access the Dai in your wallet. You will see this as three confirmations in your browser, the first two instantaneous, and the second taking as much time as the blockchain takes to process it.
 
 By using off-chain signatures this becomes a single transaction, and costs about 130,000 gas. Check with [Eth Gas Station](https://ethgasstation.info/calculatorTxV.php) for the current cost.
 
-Each series is an ERC20 token that acts as a Pool for Dai and fyDai of a certain maturity. To interact with each series you need to authorize the YieldProxy to trade for you in the pool, to access the fyDai of that series in your wallet, and for the pool to access the dai in your wallet. You will see three instantaneous confirmations, which get bundled in a single transaction. The cost of unlocking each series is about 170,000 gas.
+Each series is an ERC20 token that acts as a Pool for Dai and fyDai of a certain maturity. To interact with each series you need to authorize the YieldProxy to trade for you in the pool, to access the fyDai of that series in your wallet, and for the pool to access the dai in your wallet. You will see three instantaneous confirmations, which get bundled in a single transaction ([`authorizePool`](https://github.com/yieldprotocol/fyDai/blob/959305da5c658d8146db56b2c0f61ee9c425de92/contracts/peripheral/YieldProxy.sol#L142-L157)). The cost of unlocking each series is about 170,000 gas.
 
 If you just want to test the functionality you can just do the main authorization and unlock just one series. At the time of writing (378 USD/ETH and 40 Gwei/GAS) that would cost you $4.30.
 
