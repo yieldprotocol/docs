@@ -68,7 +68,7 @@ The Yield Protocol is coded as a set of core contracts that provide very basic, 
 
 By using off-chain signatures this becomes a single transaction, and costs about 130,000 gas. Check with [Eth Gas Station](https://ethgasstation.info/calculatorTxV.php) for the current cost.
 
-Each series is an ERC20 token that acts as a Pool for Dai and fyDai of a certain maturity. To interact with each series you need to authorize the YieldProxy to trade for you in the pool, to access the fyDai of that series in your wallet, and for the pool to access the dai in your wallet. You will see three instantaneous confirmations, which get bundled in a single transaction. The cost of unlocking each series is about 170,000 gas.
+Each series is an ERC20 token that acts as a Pool for Dai and fyDai of a certain maturity. To interact with each series you need to authorize the YieldProxy to trade for you in the pool, to access the fyDai of that series in your wallet, and for the pool to access the dai in your wallet. You will see three instantaneous confirmations, which get bundled in a single transaction ([`authorizePool`](https://github.com/yieldprotocol/fyDai/blob/959305da5c658d8146db56b2c0f61ee9c425de92/contracts/peripheral/YieldProxy.sol#L142-L157)). The cost of unlocking each series is about 170,000 gas.
 
 If you just want to test the functionality you can just do the main authorization and unlock just one series. At the time of writing (378 USD/ETH and 40 Gwei/GAS) that would cost you $4.30.
 
