@@ -1,6 +1,7 @@
 # Table of Contents
 
 - [Introduction](README.md)
+- [FAQ](FAQ.md)
 
 ---
 
