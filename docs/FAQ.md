@@ -40,13 +40,18 @@ The Yield Protocol v1 only permits borrowing and lending of Dai, and only accept
 Yield is not built with UMA. It is built on top of Maker.
 
 ### Are there any major differences between fyDai and UMA's uUSD?
-The main differences are the collateral assets, the settlement assets, and the pool mechanics.
 
-In UMA you can use any asset approved by the UMA governance, while in Yield you will use Dai for Lending and Liquidity or Eth for Borrowing. Post maturity on uUSD you will have exposure to ETH, while in Yield you will have exposure to Dai.
+When Yield Protocol's fyDai expires it is redeemable for Dai, so the fixed rate becomes a variable rate (the DSR). This could be seen as "opening a CDP on the borrower's behalf."
 
-When settling uUSDrBTC settles to renBTC, while uUSDwETH settles to WETH. At settlement, fyDai is redeemable for Dai. 
+When UMA's uUSD expires, the outstanding uUSD becomes "de-pegged", and redeemable for the underlying collateral: WETH for uUSDwETH, renBTC for uUSDrBTC.
 
-On the pool mechanics, uUSD primarily trades on Balancer, which is not optimised to trading maturing assets. As the uUSD approaches maturity the slippage in interest rate terms gets higher, and the fee (also in interest rate terms) also gets higher. Additionally, as time passes, the uUSD price offered by the Balancer pool remains the same, when it should gradually increase at the current interest rate. Really close to maturity, paying even a 0.1% fee might actually be more than you’re getting in interest.
+In UMA you can use any asset approved by the UMA governance, while in Yield v1 you will use Dai for Lending and Liquidity or Eth for Borrowing.
+
+On the pool mechanics, uUSD primarily trades on Balancer, which is not optimised to trading maturing assets.
+As the uUSD approaches maturity the slippage in interest rate terms gets higher, and the fee (also in interest rate terms)
+also gets higher. Additionally, as time passes, the uUSD price offered by the Balancer pool remains the same, when it should
+gradually increase at the current interest rate. Really close to maturity, paying even a 0.1% fee might actually be more
+than you’re getting in interest.
 
 YieldSpace (the Yield pools) is optimised for maturing assets and the fee and slippage is charged in interest rate terms. The fee is about 5% of the interest, so as time approaches maturity, prices approach 1 and the fees approach 0. You can find more details on Section 5 of the paper https://yield.is/YieldSpace.pdf
 
