@@ -28,7 +28,7 @@ $$
 No, it’s calculated differently. It’s approximately 5% of the interest paid. You can read about fees in the [YieldSpace paper](https://yield.is/YieldSpace.pdf) or in these docs.
 
 ### What is the fee structure? Formula/parameters?
-In other protocols, fees are typically charged in proportion to the amount being sold.  In the Yield App liquidity pools, prices are computed in “yield space” rather than “price space”—meaning that the fees impose a proportional spread on interest rates, rather than on prices. The exact fee calculation is detailed in our [YieldSpace paper](https://yield.is/YieldSpace.pdf) in Section 5. As a rough approximation, the fee is about 5% of the current interest rate. For example, when the marginal interest rate of an automated liqiduity pool is 10%, a borrower might see a marginal interest rate of ≈10.55%, while a lender might see a marginal interest rate of ≈9.47%.
+In other protocols, fees are typically charged in proportion to the amount being sold.  In the Yield App liquidity pools, prices are computed in “yield space” rather than “price space”—meaning that the fees impose a proportional spread on interest rates, rather than on prices. The exact fee calculation is detailed in our [YieldSpace paper](https://yield.is/YieldSpace.pdf) in Section 5. As a rough approximation, the fee is about 5% of the current interest rate. For example, when the marginal interest rate of an automated liquidity pool is 10%, a borrower might see a marginal interest rate of ≈10.55%, while a lender might see a marginal interest rate of ≈9.47%.
 
 ### When telegram?
 We have a thriving community in [Discord](https://discord.com/channels/752978124614008945), join us there!
@@ -122,7 +122,7 @@ When adding liquidity to the pool, some of your Dai is used to borrow fyDai toke
 You can stop lending when you choose. Withdrawing early may result in a loss of principal if interest rates rise significantly. 
 
 ### How do you calculate the Portfolio Value?
-The portfolio value is calculated as `(fyDai * APR) / (days to maturity / 365)`
+Portfolio value (at maturity) is the fyDai balance which represents the amount of Dai that the fyDai can be redeemed for at maturity.
 
 ### I lent some Dai, and the Current Value is show as less that I invested, why?
-when you lend you are selling Dai to the pool, and getting fyDai back. When you close your position you are selling the fyDai that you got before, and getting Dai. Both operations in the pool involve paying a fee of around 5% on the interest rate. If that specific maturity has an interest rate of a 3%, the fee would be of about (0.03 * 0.05 * trade size) in Dai. The portfolio value is thus reduced by the trading fee, and the Current Value reflects the return on selling the fyDai in the pool, which reflects the fee, interest rate changes, and slippage.
+when you lend you are selling Dai to the pool, and getting fyDai back. When you close your position you are selling the fyDai that you got before, and getting Dai. Both operations in the pool involve paying a fee of approximately 5% of the interest paid. The portfolio value is thus reduced by the trading fee, and the Current Value reflects the return on selling the fyDai in the pool, which reflects the fee, interest rate changes, and slippage.
