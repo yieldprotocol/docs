@@ -5,6 +5,9 @@ If you can't find the answer to your question here, please ask us in [Discord](h
 
 ## General
 
+### When telegram?
+We have a thriving community in [Discord](https://discord.com/channels/752978124614008945), join us there!
+
 ### How can I find you on uniswap?
 Yield Protocol has no governance token. You will not find us on Uniswap, and you should be wary about any token claiming to be from Yield Protocol. 
 
@@ -16,6 +19,21 @@ There are no current plans to release a governance token.
 ### Does the Yield Protocol have developer fees?  
 Yield Protocol v1 does not have developer fees. Users of the Yield App will pay fees for borrowing and lending via their use of the YieldSpace liquidity pools. All fees in the liquidity pools go to liquidity providers. 
 
+### Fee in the AMM is 0.3% right? Like Uniswap's?
+No, it’s calculated differently. It’s approximately 5% of the interest paid. You can read about fees in the [YieldSpace paper](https://yield.is/YieldSpace.pdf) or in these docs.
+
+### What is the fee structure? Formula/parameters?
+In other protocols, fees are typically charged in proportion to the amount being sold.  In the Yield App liquidity pools, prices are computed in “yield space” rather than “price space”—meaning that the fees impose a proportional spread on interest rates, rather than on prices. The exact fee calculation is detailed in our [YieldSpace paper](https://yield.is/YieldSpace.pdf) in Section 5. As a rough approximation, the fee is about 5% of the current interest rate. For example, when the marginal interest rate of an automated liquidity pool is 10%, a borrower might see a marginal interest rate of ≈10.55%, while a lender might see a marginal interest rate of ≈9.47%.
+
+### What assets can be borrowed or lent? What collateral can be used. 
+The Yield Protocol v1 only permits borrowing and lending of Dai, and only accepts ETH and Chai collateral. Chai collateral is not currently supported in the Yield App. 
+
+### Can anyone set up a new series/collateral/underlying in Yield, as it is done in Uniswap?
+Yield v1 can't be extended with new assets neither by the public nor the development team.
+
+### What is maturity
+The maturity of a series is the date at which its fyDai token can be redeemed for Dai at one Dai for each fyDai. Before maturity fyDai can be traded in the Pool for Dai at a market rate.
+
 ### How is APR calculated?
 
 The APR for various series in the Yield App are set by automated liquidity pools. The interest rate (and price) that an automated liquidity pool trades at is determined by the current reserves of fyDai and Dai held in the pool. The mid-market APR (the average of the borrowing and lending APRs) can be calculated with the following formula: 
@@ -23,18 +41,6 @@ The APR for various series in the Yield App are set by automated liquidity pools
 $$
 (\frac{fyDaiReserves}{DaiReserves})^\frac{1}{4} - 1
 $$
-
-### Fee in the AMM is 0.3% right? Like Uniswap's?
-No, it’s calculated differently. It’s approximately 5% of the interest paid. You can read about fees in the [YieldSpace paper](https://yield.is/YieldSpace.pdf) or in these docs.
-
-### What is the fee structure? Formula/parameters?
-In other protocols, fees are typically charged in proportion to the amount being sold.  In the Yield App liquidity pools, prices are computed in “yield space” rather than “price space”—meaning that the fees impose a proportional spread on interest rates, rather than on prices. The exact fee calculation is detailed in our [YieldSpace paper](https://yield.is/YieldSpace.pdf) in Section 5. As a rough approximation, the fee is about 5% of the current interest rate. For example, when the marginal interest rate of an automated liquidity pool is 10%, a borrower might see a marginal interest rate of ≈10.55%, while a lender might see a marginal interest rate of ≈9.47%.
-
-### When telegram?
-We have a thriving community in [Discord](https://discord.com/channels/752978124614008945), join us there!
-
-### What assets can be borrowed or lent? What collateral can be used. 
-The Yield Protocol v1 only permits borrowing and lending of Dai, and only accepts ETH and Chai collateral. Chai collateral is not currently supported in the Yield App. 
 
 ### Is this built with UMA?
 Yield is not built with UMA. It is built on top of Maker.
@@ -91,20 +97,26 @@ If you just want to use one series you need only perform the main authorization 
 
 ## Providing Liquidity
 
+### What's the difference between pool and lend?
+You lend at a fixed rate. When you pool, you provide liquidity for both borrowing and lending. The returns to pooling depends on the fees earned by the pool and the path taken by interest rates.
+
 ### Why would I want to be a Liquidity Provider?
 To earn fees from users trading between fyDai and Dai. Traditionally, providing liquidity has provided good returns compared to other ways to get passive returns.
 
 ### Why would an LP want to supply liquidity instead of supplying it to Compound, Curve, Uniswap, etc.?
 The automated liquidity pools the Yield App permit users to earn fees like other available liquidity pools, without risk of impermanent loss if liquidity is provided to maturity. 
 
-### Is there any LP incentive/gov token?
-There are no governance tokens for Yield, and therefore, no yield farming incentives. All returns are from fees paid by users. 
-
-### What's the difference between pool and lend?
-You lend at a fixed rate. When you pool, you provide liquidity for both borrowing and lending. The returns to pooling depends on the fees earned by the pool and the path taken by interest rates.
+### Is there any incentive or reward for liquidity providers besides trading fees?
+There are no yield farming incentives or other token rewards in Yield. All returns are from fees paid by users. 
 
 ### Is it right that you don't have impermanent loss as a Liquidity Provider in Yield?
 If you add liquidity to a pool and remove it only after maturity, you won't have a loss. If you remove your liquidity before maturity your profit or loss will depend on the fees earned by the pool and the path taken by the interest rates.
+
+### As a liquidity provider is the yield for all series the same?
+No, liquidity providers earn fees for trading in that series between Dai and fyDai, so the yield is dependent upon trading volume for each series.
+
+### How do interest rates and fyDai prices relate to each other?
+They are inversely correlated. If the fyDai price for a series increases, the interest rate for that series goes down.
 
 ### Do I have 50% exposure to fyDai if I provide liquidity to a pool?
 
@@ -116,7 +128,10 @@ Thus, if you pool and then interest rates change and you withdraw the next day, 
 When adding liquidity to the pool, some of your Dai is used to borrow fyDai tokens. When you burn tokens, the debt of those borrowed tokens is paid first. No funds are lost, but burning small amounts of tokens may result in no funds being retrieved. We are working on a solution. The only current workaround is to burn all of your liquidity tokens to retrieve all the funds available to you.
 
 
-## Lending
+## Lending and Borrowing
+
+### How does lending work in Yield?
+To lend Dai using Yield, you buy fyDai, paying Dai for it.
 
 ### If I lend, is it a fixed term or can I stop lending when I choose
 You can stop lending when you choose. Withdrawing early may result in a loss of principal if interest rates rise significantly. 
@@ -126,3 +141,18 @@ Portfolio value (at maturity) is the fyDai balance which represents the amount o
 
 ### I lent some Dai, and the Current Value is show as less that I invested, why?
 when you lend you are selling Dai to the pool, and getting fyDai back. When you close your position you are selling the fyDai that you got before, and getting Dai. Both operations in the pool involve paying a fee of approximately 5% of the interest paid. The portfolio value is thus reduced by the trading fee, and the Current Value reflects the return on selling the fyDai in the pool, which reflects the fee, interest rate changes, and slippage.
+
+### As a lender, how do interest rate changes affect me?
+Lenders are holding fyDai. If interest rates go up, the value of lenders’ holdings goes down. However, if they hold to maturity, then this decline in present value is exactly cancelled out by the increase in the interest that they earn. Borrowers are effectively short fyDai—to exit their position early they have to buy fyDai.
+
+### As a borrower, what happens if I miss the repayment date?
+When a series matures, your Yield Vault will start to owe the Maker stability fee on the debt. If your debt increases enough to bring your Yield Vault under the collateralization rate you might be liquidated.
+
+### As a lender, what happens if I don't close my position on the repayment date?
+When a series matures, the fyDai that you hold, representing your lending position, start to accrue value at the same rate as MakerDAO's DSR. In other words, your fyDai becomes equivalent to Chai on maturity.
+
+
+## Liquidations
+
+### Who liquidates positions?
+Yield currently runs a liquidation bot, but long term we expect the community to perform liquidations. We have not tried to make the bot especially competitive compared to some of the sophisticated liquidators out there.
