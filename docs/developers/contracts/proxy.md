@@ -1,6 +1,6 @@
 # Yield Proxies
 
-The core contracts implement the minimum functionality for the fyDai system to exist. A number of stateless proxy contracts implements all the convenience functionality to provide a pleasant user experience through the frontend.
+The core contracts implement the minimum functionality for the fyDai system to exist. A number of stateless proxy contracts implement all the convenience functionality to provide a pleasant user experience through the frontend.
 
 
 ## BorrowProxy
