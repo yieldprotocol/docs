@@ -31,7 +31,7 @@ The Yield Protocol v1 only permits borrowing and lending of Dai, and only accept
 ### Can anyone set up a new series/collateral/underlying in Yield, as it is done in Uniswap?
 Yield v1 can't be extended with new assets neither by the public nor the development team.
 
-### What is maturity
+### What is maturity?
 The maturity of a series is the date at which its fyDai token can be redeemed for Dai at one Dai for each fyDai. Before maturity fyDai can be traded in the Pool for Dai at a market rate.
 
 ### How is APR calculated?
