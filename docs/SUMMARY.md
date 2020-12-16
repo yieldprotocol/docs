@@ -23,6 +23,9 @@
     - [Liquidations](developers/contracts/liquidations.md)
     - [Unwind](developers/contracts/unwind.md)
     - [Treasury](developers/contracts/treasury.md)
-- [Periphery Contracts](developers/contracts/periphery.md)
-    - [YieldProxy](developers/contracts/proxy.md)
     - [Pool](developers/contracts/pool.md)
+- [Periphery Contracts](developers/contracts/periphery.md)
+    - [BorrowProxy](developers/contracts/borrow-proxy.md)
+    - [PoolProxy](developers/contracts/pool-proxy.md)
+    - [ImportProxy](developers/contracts/import-proxy.md)
+    
