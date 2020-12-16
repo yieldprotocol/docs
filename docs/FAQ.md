@@ -68,31 +68,19 @@ If you click each series of the pool you should be able to find the number of li
 Below there is a table with the maximum reported cost in GAS of the actions that you can take with Yield. Use the [Eth Gas Station Tx Calculator](https://ethgasstation.info/calculatorTxV.php) to find out the current USD cost.
 
 ```
-Main authorisation - 131,000 GAS - proxy.onboard
-Each series unlock - 171,000 GAS - proxy.authorizePool
+Post ETH           - 163,000 GAS - borrowProxy.post
+Withdraw ETH       -  87,000 GAS - borrowProxy.withdraw
+Borrow Dai         - 235,000 GAS - borrowProxy.borrowDaiForMaximumFYDai
+Repay Borrowing    - 312,000 GAS - borrowProxy.repayDai
 
-Post ETH           - 163,000 GAS - proxy.post
-Withdraw ETH       -  87,000 GAS - proxy.withdraw
-Borrow Dai         - 235,000 GAS - proxy.borrowDaiForMaximumFYDai
-Repay Borrowing    - 312,000 GAS - proxy.repayDaiWithSignature
+Lend Dai           - 124,000 GAS - borrowProxy.sellDai
+Close Lending      - 190,000 GAS - borrowProxy.buyDai
 
-Lend Dai           - 124,000 GAS - proxy.sellFYDai
-Close Lending      - 190,000 GAS - proxy.buyDaiWithSignature
-
-Add Liquidity      - 477,000 GAS - proxy.addLiquidity
-Remove Liquidity   - 312,000 GAS - proxy.repayDaiWithSignature
+Add Liquidity      - 477,000 GAS - poolProxy.addLiquidity
+Remove Liquidity   - 312,000 GAS - poolProxy.repayDai
 
 Redeem fyDai       - 240,000 GAS - fyDai.redeem
 ```
-
-### I had to sign and authorize nine times before being able to provide liquidity. Why are there so many steps?
-The Yield Protocol is coded as a set of core contracts that provide very basic, but very robust, functionality for minting and redeeming fyDai. In addition to the core contracts, there is a set of automated liquidity pools for trading fyDai. Further, a separate contract (the YieldProxy) exists to allow users to interact with the core contracts easily. 
-
-When using the Yield App, you must first onboard to the YieldProxy. Onboarding authorizes the YieldProxy to interact with the core contracts on your behalf. Within the onboard transaction ([`onboard`](https://github.com/yieldprotocol/fyDai/blob/959305da5c658d8146db56b2c0f61ee9c425de92/contracts/peripheral/YieldProxy.sol#L129-L140)) we embed an extra signature to allow the YieldProxy to access the Dai in your wallet. You will see this as three confirmations in your browser, the first two instantaneous, and the second taking as much time as the blockchain takes to process it. By using off-chain signatures this becomes a single transaction, and costs about 130,000 gas. Check with [Eth Gas Station](https://ethgasstation.info/calculatorTxV.php) for the current cost.
-
-Additionally, each series is the Yield Protocol corresponds to an ERC20 token that interacts with an automated liquidity pool for that series. To interact with each series you need to authorize the YieldProxy to trade for you in the pool, to access the fyDai of that series in your wallet, and for the pool to access the dai in your wallet. Thus, when authorizing a series, you will see three back-to-back signature requests, which get bundled in a single transaction ([`authorizePool`](https://github.com/yieldprotocol/fyDai/blob/959305da5c658d8146db56b2c0f61ee9c425de92/contracts/peripheral/YieldProxy.sol#L142-L157)). The cost of unlocking each series is about 170,000 gas. You need only to unlock the series you choose to interact with. 
-
-If you just want to use one series you need only perform the main authorization and unlock just one series. At the time of this writing (at 378 USD/ETH and 40 Gwei/GAS) that would cost you $4.30.
 
 
 ## Providing Liquidity
