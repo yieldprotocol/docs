@@ -68,10 +68,10 @@ The Yield Protocol aims to handle this case as gracefully as possible, initiatin
 Below you will find all our deployed smart contracts' addresses.
 
 #### Mainnet
-[include](networks/mainnet/addrs_1.16Oct.json)
+[include](networks/mainnet/addrs_1.json)
 
 #### Kovan
-[include](networks/kovan/addrs_42.16Dec.json)
+[include](networks/kovan/addrs_42.json)
 
 These contracts have special permissions over each other. You may review these permissions
 by running [this script](https://github.com/yieldprotocol/fyDai/blob/master/scripts/orchestration.js).
